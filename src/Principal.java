@@ -2,9 +2,15 @@ package src;
 import java.util.*;
 public class Principal {
     public static void main(String[] args){
+        /**
+         * Instanciamos un objeto de la clase principal
+         */
         Principal principal = new Principal();
     }
 
+    /**
+     * Constructor de la clase, el cual hace todos los llamados a la logica del programa
+     */
     public Principal(){
         mostrarContador();
         System.out.println("\n");
@@ -19,8 +25,14 @@ public class Principal {
         mostrarFraccion();
     }
 
+    /**
+     * Instanciamos un objeto de tipo scanner para poder leer en pantalla
+     */
     Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Metodo para realizar el llamado a la clase contador
+     */
     public void mostrarContador(){
         Contador contador = new Contador(1);
         Contador contadorAuxiliar = contador;
@@ -34,6 +46,9 @@ public class Principal {
         System.out.println("El numero del contador se decremento, ahora vale: "+contador.getContador());
     }
 
+    /**
+     * Metodo para realizar el llamado a la clase cuadrado
+     */
     public void mostrarCuadrado(){
         Cuadrado cuadrado = new Cuadrado(20);
         Cuadrado cuadradoAuxiliar = cuadrado;
@@ -46,6 +61,9 @@ public class Principal {
         System.out.println("El perimetro del cuadrado es: "+cuadrado.getPerimetro());
     }
 
+    /**
+     * Metodo para mostrar el llamado a la clase circulo
+     */
     public void mostrarCirculo(){
         Circulo circulo = new Circulo(25.6);
         Circulo circuloAuxiliar = circulo;
@@ -58,6 +76,9 @@ public class Principal {
         System.out.println("El perimetro del circulo es: "+circulo.getPerimetro());
     }
 
+    /**
+     * Metodo para mostrar la clase rectangulo
+     */
     public void mostrarRectangulo(){
         Rectangulo rectangulo = new Rectangulo(20,5);
         Rectangulo rectanguloAuxiliar = rectangulo;
@@ -71,6 +92,9 @@ public class Principal {
         System.out.println("El perimetro del rectangulo es: "+rectangulo.getPerimetro());
     }
 
+    /**
+     * Metodo para mostrar la clase libro
+     */
     public void mostrarLibro(){
         int opcion=0, opcion1=0;
         Libro libro = new Libro("Reyes de las Olas", 2005, "Diego Maldonado", false);
@@ -95,17 +119,21 @@ public class Principal {
         }
     }
 
+    /**
+     * Metodo para realizar las operaciones con la clase fraccion
+     */
     public void mostrarFraccion(){
-        Fraccion f1 = new Fraccion(1, 4); // Fracción 1/4
-        Fraccion f2 = new Fraccion(1, 2); // Fracción 1/2
-        Fraccion f3 = new Fraccion(); // Fracción 0/1
-        Fraccion f4 = new Fraccion(4); // Fracción 4/1
+        Fraccion fraccion1 = new Fraccion(1, 4); // Fracción 1/4
+        Fraccion fraccion2 = new Fraccion(1, 2); // Fracción 1/2
+        Fraccion fraccion3 = new Fraccion(); // Fracción 0/1
+        Fraccion fraccion4 = new Fraccion(4); // Fracción 4/1
         // operaciones aritméticas con esas fracciones
-        Fraccion suma = f1.sumar(f2);
-        Fraccion resta = f1.restar(f3);
-        Fraccion producto = f1.multiplicar(f4);
-        Fraccion cociente = f1.dividir(f2);
+        Fraccion suma = fraccion1.sumar(f2);
+        Fraccion resta = fraccion1.restar(f3);
+        Fraccion producto = fraccion1.multiplicar(f4);
+        Fraccion cociente = fraccion1.dividir(f2);
         //mostrar resultados
+        System.out.println("La prueba de la clase fraccion es la siguiente: ");
         System.out.println(f1 + " + " + f2 + " = " + suma);
         System.out.println(f1 + " - " + f3 + " = " + resta);
         System.out.println(f1 + " * " + f4 + " = " + producto);
