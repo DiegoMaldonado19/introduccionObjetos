@@ -45,7 +45,7 @@ public class Libro {
         return prestado;
     }
 
-    public boolena setPrestado(boolean prestado){
+    public void setPrestado(boolean prestado){
         this.prestado = prestado;
     }
 

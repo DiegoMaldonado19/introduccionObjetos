@@ -128,15 +128,15 @@ public class Principal {
         Fraccion fraccion3 = new Fraccion(); // Fracción 0/1
         Fraccion fraccion4 = new Fraccion(4); // Fracción 4/1
         // operaciones aritméticas con esas fracciones
-        Fraccion suma = fraccion1.sumar(f2);
-        Fraccion resta = fraccion1.restar(f3);
-        Fraccion producto = fraccion1.multiplicar(f4);
-        Fraccion cociente = fraccion1.dividir(f2);
+        Fraccion suma = fraccion1.sumar(fraccion2);
+        Fraccion resta = fraccion1.restar(fraccion3);
+        Fraccion producto = fraccion1.multiplicar(fraccion4);
+        Fraccion cociente = fraccion1.dividir(fraccion2);
         //mostrar resultados
         System.out.println("La prueba de la clase fraccion es la siguiente: ");
-        System.out.println(f1 + " + " + f2 + " = " + suma);
-        System.out.println(f1 + " - " + f3 + " = " + resta);
-        System.out.println(f1 + " * " + f4 + " = " + producto);
-        System.out.println(f1 + " / " + f2 + " = " + cociente);   
+        System.out.println(fraccion1 + " + " + fraccion2 + " = " + suma);
+        System.out.println(fraccion1 + " - " + fraccion3 + " = " + resta);
+        System.out.println(fraccion1 + " * " + fraccion4 + " = " + producto);
+        System.out.println(fraccion1 + " / " + fraccion2 + " = " + cociente);   
     }
 }
