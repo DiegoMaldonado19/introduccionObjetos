@@ -9,6 +9,8 @@ public class Principal {
         mostrarContador();
         System.out.println("\n");
         mostrarCuadrado();
+        System.out.println("\n");
+        mostrarCirculo();
     }
 
     public void mostrarContador(){
@@ -35,5 +37,17 @@ public class Principal {
         cuadradoAuxiliar.perimetro();
         System.out.println("El area del cuadrado es: "+cuadrado.getArea());
         System.out.println("El perimetro del cuadrado es: "+cuadrado.getPerimetro());
+    }
+
+    public void mostrarCirculo(){
+        Circulo circulo = new Circulo(25.6);
+        Circulo circuloAuxiliar = circulo;
+        System.out.println("El radio original es de: "+circulo.getRadio());
+        circuloAuxiliar.setRadio(15.5);
+        System.out.println("El radio nuevo es de: "+circulo.getRadio());
+        circuloAuxiliar.calcularArea();
+        circuloAuxiliar.calcularPerimetro();
+        System.out.println("El area del circulo es: "+circulo.getArea());
+        System.out.println("El perimetro del circulo es: "+circulo.getPerimetro());
     }
 }
