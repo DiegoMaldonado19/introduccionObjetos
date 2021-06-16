@@ -11,6 +11,8 @@ public class Principal {
         mostrarCuadrado();
         System.out.println("\n");
         mostrarCirculo();
+        System.out.println("\n");
+        mostrarRectangulo();
     }
 
     public void mostrarContador(){
@@ -27,12 +29,11 @@ public class Principal {
     }
 
     public void mostrarCuadrado(){
-        Cuadrado cuadrado = new Cuadrado(20, 5);
+        Cuadrado cuadrado = new Cuadrado(20);
         Cuadrado cuadradoAuxiliar = cuadrado;
-        System.out.println("Los valores originales son, base: "+cuadrado.getBase()+" y altura: "+cuadrado.getAltura());
-        cuadradoAuxiliar.setBase(10);
-        cuadradoAuxiliar.setAltura(30);
-        System.out.println("Los valores nuevos son, base: "+cuadrado.getBase()+" y altura: "+cuadrado.getAltura());
+        System.out.println("El valor original del lado es: "+cuadrado.getLado());
+        cuadradoAuxiliar.setLado(10);
+        System.out.println("El valor nuevo del lado es: "+cuadrado.getLado());
         cuadradoAuxiliar.area();
         cuadradoAuxiliar.perimetro();
         System.out.println("El area del cuadrado es: "+cuadrado.getArea());
@@ -49,5 +50,18 @@ public class Principal {
         circuloAuxiliar.calcularPerimetro();
         System.out.println("El area del circulo es: "+circulo.getArea());
         System.out.println("El perimetro del circulo es: "+circulo.getPerimetro());
+    }
+
+    public void mostrarRectangulo(){
+        Rectangulo rectangulo = new Rectangulo(20,5);
+        Rectangulo rectanguloAuxiliar = rectangulo;
+        System.out.println("Los valores originales son, base: "+rectangulo.getBase()+" y altura: "+rectangulo.getAltura());
+        rectanguloAuxiliar.setAltura(80);
+        rectanguloAuxiliar.setBase(15);
+        System.out.println("Los valores nuevos son, base: "+rectangulo.getBase()+" y "+rectangulo.getAltura());
+        rectanguloAuxiliar.calcularArea();
+        rectanguloAuxiliar.calcularPerimetro();
+        System.out.println("El area del rectangulo es: "+rectangulo.getArea());
+        System.out.println("El perimetro del rectangulo es: "+rectangulo.getPerimetro());
     }
 }
