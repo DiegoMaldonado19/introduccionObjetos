@@ -13,7 +13,11 @@ public class Principal {
         mostrarCirculo();
         System.out.println("\n");
         mostrarRectangulo();
+        System.out.println("\n");
+        mostrarLibro();
     }
+
+    Scanner scanner = new Scanner(System.in);
 
     public void mostrarContador(){
         Contador contador = new Contador(1);
@@ -63,5 +67,29 @@ public class Principal {
         rectanguloAuxiliar.calcularPerimetro();
         System.out.println("El area del rectangulo es: "+rectangulo.getArea());
         System.out.println("El perimetro del rectangulo es: "+rectangulo.getPerimetro());
+    }
+
+    public void mostrarLibro(){
+        int opcion=0, opcion1=0;
+        Libro libro = new Libro("Reyes de las Olas", 2005, "Diego Maldonado", false);
+        Libro libroAuxiliar = libro;
+        libro.mostrarInformacion();
+        System.out.println("\n");
+        System.out.println("¿Deseas prestar el libro?");
+        System.out.println("1) Si");
+        System.out.println("2) No");
+        opcion = scanner.nextInt();
+        libroAuxiliar.prestamo(opcion);
+        System.out.println("¿Deseas devolver el libro?");
+        System.out.println("1) Si");
+        System.out.println("2) No");
+        opcion1 = scanner.nextInt();
+        if(opcion1==1){
+            libroAuxiliar.devolver();
+            libro.mostrarInformacion();
+        }
+        else{
+            libro.mostrarInformacion();
+        }
     }
 }
